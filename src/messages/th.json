@@ -1,0 +1,583 @@
+{
+  "Hero": {
+    "title": "ตัวเร่งเครือข่ายที่ปลอดภัย",
+    "subtitle": "VPN ที่รวดเร็ว ปลอดภัย และฟรีสำหรับทุกคน",
+    "cta": "ดาวน์โหลดเลย",
+    "serversOnline": "เซิร์ฟเวอร์ออนไลน์",
+    "appStore": "App Store",
+    "android": "Android"
+  },
+  "Features": {
+    "title": "ทำไมต้องเลือก Sparklink",
+    "items": [
+      {
+        "title": "One-Click Connect",
+        "description": "Connect in seconds with zero learning curve",
+        "icon": "zap"
+      },
+      {
+        "title": "Multi-Protocol Smart Switch",
+        "description": "WireGuard/V2Ray/OpenVPN auto-optimized",
+        "icon": "globe"
+      },
+      {
+        "title": "Free via Rewards",
+        "description": "Watch ads to earn time, free to use",
+        "icon": "gift"
+      },
+      {
+        "title": "Unlimited Devices",
+        "description": "Unlimited simultaneous connections",
+        "icon": "smartphone"
+      },
+      {
+        "title": "Military-Grade Encryption",
+        "description": "AES-256 encryption protects your data",
+        "icon": "shield"
+      },
+      {
+        "title": "Strict No-Logs Policy",
+        "description": "We never track or store your activity",
+        "icon": "star"
+      },
+      {
+        "title": "24/7 Customer Support",
+        "description": "Priority support for paid subscribers",
+        "icon": "headphones"
+      },
+      {
+        "title": "Global CDN Network",
+        "description": "Optimized routes across 30+ countries",
+        "icon": "layers"
+      },
+      {
+        "title": "Intelligent Routing",
+        "description": "Auto-selects fastest server for you",
+        "icon": "refreshCw"
+      },
+      {
+        "title": "No Speed Throttling",
+        "description": "Full bandwidth with zero restrictions",
+        "icon": "gauge"
+      },
+      {
+        "title": "DNS Leak Protection",
+        "description": "Your DNS queries stay private and secure",
+        "icon": "lock"
+      },
+      {
+        "title": "30+ Country Coverage",
+        "description": "Servers across Americas, Europe, Asia & more",
+        "icon": "server"
+      }
+    ]
+  },
+  "Testimonials": {
+    "title": "ผู้ใช้พูดถึงเราอย่างไร",
+    "count": "1000+ reviews from users worldwide",
+    "items": [
+      {
+        "name": "Alex Chen",
+        "country": "Singapore",
+        "avatar": "A",
+        "rating": 5,
+        "text": "Best VPN I have ever used. Super fast and reliable!"
+      },
+      {
+        "name": "Maria Santos",
+        "country": "Brazil",
+        "avatar": "M",
+        "rating": 5,
+        "text": "The free rewards system is amazing. I've been using it for months without paying a cent."
+      },
+      {
+        "name": "John Smith",
+        "country": "United States",
+        "avatar": "J",
+        "rating": 5,
+        "text": "Great speeds and very easy to set up. Highly recommended!"
+      },
+      {
+        "name": "Yuki Tanaka",
+        "country": "Japan",
+        "avatar": "Y",
+        "rating": 5,
+        "text": "The connection is incredibly stable. I use it for gaming every day."
+      },
+      {
+        "name": "Priya Patel",
+        "country": "India",
+        "avatar": "P",
+        "rating": 4,
+        "text": "Works perfectly for streaming. Occasionally need to reconnect but overall excellent."
+      },
+      {
+        "name": "Carlos Garcia",
+        "country": "Mexico",
+        "avatar": "C",
+        "rating": 5,
+        "text": "Finally a VPN that works for my entire family. We all love it!"
+      },
+      {
+        "name": "Emma Wilson",
+        "country": "United Kingdom",
+        "avatar": "E",
+        "rating": 5,
+        "text": "No logs policy gives me peace of mind. Trustworthy and fast."
+      },
+      {
+        "name": "Omar Hassan",
+        "country": "Egypt",
+        "avatar": "O",
+        "rating": 4,
+        "text": "Good value for money. The ad-supported free tier is very generous."
+      },
+      {
+        "name": "Sophie Martin",
+        "country": "France",
+        "avatar": "S",
+        "rating": 5,
+        "text": "Très rapide et facile à utiliser. Je recommande vivement!"
+      },
+      {
+        "name": "Wei Zhang",
+        "country": "China",
+        "avatar": "W",
+        "rating": 5,
+        "text": "The only VPN that consistently works. Cannot recommend enough."
+      },
+      {
+        "name": "Lucas Oliveira",
+        "country": "Brazil",
+        "avatar": "L",
+        "rating": 4,
+        "text": "Great for watching content from other regions. Speeds are solid."
+      },
+      {
+        "name": "Aisha Mohammed",
+        "country": "UAE",
+        "avatar": "A",
+        "rating": 5,
+        "text": "Super easy setup and excellent customer support when I needed help."
+      },
+      {
+        "name": "Daniel Kim",
+        "country": "South Korea",
+        "avatar": "D",
+        "rating": 5,
+        "text": "Low latency servers in Asia make this the best choice for us."
+      },
+      {
+        "name": "Sarah Johnson",
+        "country": "Australia",
+        "avatar": "S",
+        "rating": 4,
+        "text": "Reliable connection even during peak hours. Happy with the service."
+      },
+      {
+        "name": "Rajesh Kumar",
+        "country": "India",
+        "avatar": "R",
+        "rating": 5,
+        "text": "Worth every penny. The yearly plan is an incredible deal."
+      },
+      {
+        "name": "Nina Petrov",
+        "country": "Russia",
+        "avatar": "N",
+        "rating": 5,
+        "text": "Excellent speeds and no buffering when watching videos."
+      },
+      {
+        "name": "Tommy Lee",
+        "country": "Hong Kong",
+        "avatar": "T",
+        "rating": 4,
+        "text": "Good selection of servers. Connection is stable for daily use."
+      },
+      {
+        "name": "Isabella Costa",
+        "country": "Italy",
+        "avatar": "I",
+        "rating": 5,
+        "text": "Fantastico! Funziona perfettamente con tutti i servizi di streaming."
+      },
+      {
+        "name": "Ahmed Rahman",
+        "country": "Malaysia",
+        "avatar": "A",
+        "rating": 5,
+        "text": "Been using for 6 months. Zero complaints, amazing service."
+      },
+      {
+        "name": "Lena Schmidt",
+        "country": "Germany",
+        "avatar": "L",
+        "rating": 4,
+        "text": "Sehr gut! Verbindung ist stabil und die Geschwindigkeit überzeugt."
+      },
+      {
+        "name": "Kevin Brown",
+        "country": "Canada",
+        "avatar": "K",
+        "rating": 5,
+        "text": "The multi-device support is a game changer. Whole family connected."
+      },
+      {
+        "name": "Mia Wang",
+        "country": "Taiwan",
+        "avatar": "M",
+        "rating": 5,
+        "text": "Fast, secure, and affordable. Everything I need in a VPN."
+      },
+      {
+        "name": "Pedro Hernandez",
+        "country": "Spain",
+        "avatar": "P",
+        "rating": 4,
+        "text": "Muy buena opción. La versión gratuita es bastante usable."
+      },
+      {
+        "name": "Fatima Al-Sayed",
+        "country": "Qatar",
+        "avatar": "F",
+        "rating": 5,
+        "text": "Privacy focused and transparent about their policies. I trust them."
+      },
+      {
+        "name": "Jack Thompson",
+        "country": "New Zealand",
+        "avatar": "J",
+        "rating": 5,
+        "text": "Works flawlessly even from down under. Great ping times."
+      },
+      {
+        "name": "Ananya Singh",
+        "country": "India",
+        "avatar": "A",
+        "rating": 4,
+        "text": "Good speeds and easy to use. The rewards system is a nice bonus."
+      },
+      {
+        "name": "Dmitri Ivanov",
+        "country": "Ukraine",
+        "avatar": "D",
+        "rating": 5,
+        "text": "Best VPN for bypassing geo-restrictions. Works every time."
+      },
+      {
+        "name": "Hannah Müller",
+        "country": "Austria",
+        "avatar": "H",
+        "rating": 5,
+        "text": "Exzellenter Service. Die Verbindung ist immer stabil und schnell."
+      },
+      {
+        "name": "Ryan O'Brien",
+        "country": "Ireland",
+        "avatar": "R",
+        "rating": 4,
+        "text": "Solid VPN service. Occasional disconnects but auto-reconnect works well."
+      },
+      {
+        "name": "Sakura Yamamoto",
+        "country": "Japan",
+        "avatar": "S",
+        "rating": 5,
+        "text": "Game line optimization is amazing. My ping dropped by half."
+      },
+      {
+        "name": "Mohammed Ali",
+        "country": "Saudi Arabia",
+        "avatar": "M",
+        "rating": 5,
+        "text": "Trustworthy and fast. The no-logs policy is exactly what I wanted."
+      },
+      {
+        "name": "Elena Popescu",
+        "country": "Romania",
+        "avatar": "E",
+        "rating": 4,
+        "text": "Bun serviciu! Viteze bune și conectare rapidă. Recomand."
+      },
+      {
+        "name": "Chris Anderson",
+        "country": "Sweden",
+        "avatar": "C",
+        "rating": 5,
+        "text": "By far the best VPN on the market. Speed and reliability are top notch."
+      }
+    ]
+  },
+  "Download": {
+    "title": "ดาวน์โหลด Sparklink",
+    "android": "ดาวน์โหลดสำหรับ Android",
+    "ios": "ดาวน์โหลดสำหรับ iOS",
+    "qrAlt": "สแกนเพื่อดาวน์โหลด Sparklink",
+    "scanIos": "Scan to download on App Store",
+    "scanAndroid": "Scan to download on Google Play",
+    "version": "v1.0.0",
+    "updateDate": "2025-05-13",
+    "size": "< 30MB",
+    "requirements": "Android 12+ / iOS 15+",
+    "web": "ใช้งานออนไลน์"
+  },
+  "Faq": {
+    "title": "คำถามที่พบบ่อย",
+    "items": [
+      {
+        "question": "Is Sparklink really free?",
+        "answer": "Yes! Sparklink offers a free tier with limited features. You can earn more free time by watching videos or inviting friends."
+      },
+      {
+        "question": "Does Sparklink keep logs?",
+        "answer": "No, we have a strict no-logs policy. We never track or store your browsing activity."
+      },
+      {
+        "question": "How does the free trial work?",
+        "answer": "Simply download the app and start using it. Free users get limited access to servers with ad-supported viewing."
+      },
+      {
+        "question": "Can I use Sparklink on multiple devices?",
+        "answer": "Yes! Free users can connect 1 device simultaneously. Paid plans support up to 10 or unlimited devices depending on your subscription tier."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept major credit cards, debit cards, and popular digital payment methods including PayPal and cryptocurrencies. Payment is processed securely through our payment partners."
+      },
+      {
+        "question": "How do I cancel my subscription?",
+        "answer": "You can cancel anytime from your account settings. Your subscription will remain active until the end of the current billing period. There are no cancellation fees."
+      },
+      {
+        "question": "Which countries have servers?",
+        "answer": "Sparklink operates servers in 30+ countries across North America, Europe, Asia Pacific, and South America. Paid users get access to all locations."
+      },
+      {
+        "question": "What is the refund policy?",
+        "answer": "We offer a 7-day money-back guarantee for first-time purchases. If you're not satisfied within the first 7 days, contact our support team for a full refund."
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": "Free users can reach us through our community forum. Paid subscribers get priority 24/7 support via email and live chat for faster response times."
+      },
+      {
+        "question": "What protocols does Sparklink support?",
+        "answer": "Sparklink supports multiple protocols including WireGuard, V2Ray, and OpenVPN. The app automatically selects the optimal protocol based on your network conditions."
+      }
+    ]
+  },
+  "Header": {
+    "download": "ดาวน์โหลด",
+    "pricing": "ราคา",
+    "faq": "คำถามที่พบบ่อย",
+    "features": "ฟีเจอร์",
+    "signIn": "เข้าสู่ระบบ",
+    "language": "Language"
+  },
+  "Pricing": {
+    "title": "ราคา",
+    "subtitle": "Start for free and upgrade as you grow",
+    "cta": "Get Started",
+    "selected": "Selected",
+    "subscribeNow": "Subscribe Now",
+    "redirectToPayment": "You will be redirected to payment",
+    "signInToSubscribe": "Sign in to Subscribe",
+    "signInRequired": "Please sign in first to purchase this plan",
+    "planNotFound": "Plan not found",
+    "plans": {
+      "monthly": {
+        "name": "Monthly",
+        "features": [
+          "All VIP node access",
+          "100Mbps bandwidth cap",
+          "10 simultaneous devices",
+          "Game line optimization",
+          "Video line optimization",
+          "Ad-free experience",
+          "Priority customer support",
+          "Multi-protocol support"
+        ],
+        "price": "9.99$",
+        "unit": "/เดือน",
+        "daily": "0.33$/วัน"
+      },
+      "quarterly": {
+        "name": "Quarterly",
+        "features": [
+          "All VIP node access",
+          "100Mbps bandwidth cap",
+          "10 simultaneous devices",
+          "Game line optimization",
+          "Video line optimization",
+          "Ad-free experience",
+          "Priority customer support",
+          "Multi-protocol support",
+          "Priority intelligent routing"
+        ],
+        "price": "24.99$",
+        "unit": "/ไตรมาส",
+        "daily": "0.28$/วัน"
+      },
+      "yearly": {
+        "name": "Yearly",
+        "features": [
+          "All VIP node access",
+          "Unlimited bandwidth",
+          "Unlimited devices",
+          "Game line optimization",
+          "Video line optimization",
+          "Ad-free experience",
+          "24/7 priority support",
+          "Multi-protocol support",
+          "Priority intelligent routing",
+          "Dedicated server option"
+        ],
+        "price": "79.99$",
+        "unit": "/ปี",
+        "daily": "0.22$/วัน"
+      }
+    },
+    "badge": "คุ้มค่าที่สุด",
+    "benefitsTitle": "เปรียบเทียบสิทธิประโยชน์",
+    "freePlan": "ฟรี",
+    "vipPlan": "VIP",
+    "benefits": {
+      "nodes": "การเข้าถึงโหนด",
+      "bandwidth": "ขีดจำกัดแบนด์วิดธ์",
+      "devices": "อุปกรณ์พร้อมกัน",
+      "gameLine": "ไลน์เกม",
+      "videoLine": "ไลน์วิดีโอ",
+      "support": "การสนับสนุน",
+      "ads": "โฆษณาสร้างแรงจูงใจ",
+      "routing": "Intelligent Routing",
+      "protocol": "Protocol Support",
+      "dedicated": "Dedicated Server"
+    },
+    "comparison": {
+      "nodes": {
+        "free": "Limited nodes",
+        "monthly": "200+ VIP nodes",
+        "quarterly": "200+ VIP nodes",
+        "yearly": "200+ VIP nodes"
+      },
+      "bandwidth": {
+        "free": "5Mbps",
+        "monthly": "100Mbps",
+        "quarterly": "100Mbps",
+        "yearly": "Unlimited"
+      },
+      "devices": {
+        "free": "1 device",
+        "monthly": "10 devices",
+        "quarterly": "10 devices",
+        "yearly": "Unlimited"
+      },
+      "gameLine": {
+        "free": "—",
+        "monthly": "✓",
+        "quarterly": "✓",
+        "yearly": "✓"
+      },
+      "videoLine": {
+        "free": "—",
+        "monthly": "✓",
+        "quarterly": "✓",
+        "yearly": "✓"
+      },
+      "support": {
+        "free": "Community forum",
+        "monthly": "Priority",
+        "quarterly": "Priority",
+        "yearly": "24/7 Priority"
+      },
+      "ads": {
+        "free": "Shown",
+        "monthly": "Hidden",
+        "quarterly": "Hidden",
+        "yearly": "Hidden"
+      },
+      "routing": {
+        "free": "Standard",
+        "monthly": "Standard",
+        "quarterly": "Smart routing",
+        "yearly": "Smart routing"
+      },
+      "protocol": {
+        "free": "Single",
+        "monthly": "Multi",
+        "quarterly": "Multi",
+        "yearly": "Multi"
+      },
+      "dedicated": {
+        "free": "—",
+        "monthly": "—",
+        "quarterly": "—",
+        "yearly": "Eligible"
+      }
+    },
+    "refundPolicy": "รับประกันคืนเงิน 7 วัน · ชำระเงินปลอดภัย"
+  },
+  "Legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "content": "Last updated: May 2025\n\n1. Information We Collect\nWe collect information you provide directly, such as your phone number when you register. We also collect usage data including connection timestamps, data volume, and server selections to improve our service.\n\n2. How We Use Your Information\nWe use your information to provide, maintain, and improve our VPN service; to send you technical notices and support messages; and to comply with legal obligations.\n\n3. Data Security\nWe implement industry-standard encryption and security measures to protect your data. We do not log or store your browsing activity, DNS queries, or connection content.\n\n4. Data Sharing\nWe do not sell your personal information. We may share data with service providers who assist us in operating our infrastructure, under strict confidentiality agreements.\n\n5. Your Rights\nYou may request access to, correction of, or deletion of your personal data by contacting our support team."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "content": "Last updated: May 2025\n\n1. Acceptance of Terms\nBy using Sparklink, you agree to these Terms of Service. If you do not agree, please do not use the service.\n\n2. Service Description\nSparklink provides a virtual private network service that encrypts your internet connection and routes it through our servers.\n\n3. Acceptable Use\nYou agree not to use Sparklink for any illegal activities, including but not limited to: hacking, fraud, or distributing malicious software.\n\n4. Free Tier\nFree users may access limited servers with restrictions. Additional free time can be earned through watching advertisements or inviting friends.\n\n5. Payments and Refunds\nPaid subscriptions are billed according to your chosen plan. We offer a 7-day money-back guarantee on first-time purchases.\n\n6. Termination\nWe reserve the right to suspend or terminate accounts that violate these terms or engage in prohibited activities.\n\n7. Limitation of Liability\nSparklink is provided \"as is\" without warranty. We are not liable for damages arising from use of our service."
+    }
+  },
+  "Footer": {
+    "privacy": "นโยบายความเป็นส่วนตัว",
+    "terms": "ข้อตกลงการใช้บริการ",
+    "faq": "คำถามที่พบบ่อย",
+    "copyright": "© {year} Sparklink. สงวนลิขสิทธิ์ทุกประการ"
+  },
+  "Metadata": {
+    "title": "Sparklink - ตัวเร่งเครือข่ายที่ปลอดภัย",
+    "description": "VPN ที่รวดเร็ว ปลอดภัย และฟรีสำหรับทุกคน"
+  },
+  "Auth": {
+    "qrTab": "คิวอาร์โค้ด",
+    "smsTab": "โทรศัพท์",
+    "qrTitle": "สแกนคิวอาร์โค้ดเพื่อเข้าสู่ระบบ",
+    "qrDesc": "เปิดแอป Sparklink และสแกนคิวอาร์โค้ดนี้เพื่อเข้าสู่ระบบทันที",
+    "qrPolling": "กำลังรอการสแกน...",
+    "smsTitle": "เข้าสู่ระบบด้วยเบอร์โทรศัพท์",
+    "phoneLabel": "เบอร์โทรศัพท์",
+    "phoneInvalid": "กรุณากรอกหมายเลขโทรศัพท์ที่ถูกต้อง",
+    "codeLabel": "รหัสยืนยัน",
+    "sendCode": "ส่งรหัส",
+    "signIn": "เข้าสู่ระบบ",
+    "signingIn": "กำลังเข้าสู่ระบบ...",
+    "resend": "ส่งอีกครั้ง",
+    "resendIn": "ส่งอีกครั้งใน {seconds} วินาที",
+    "successTitle": "ยินดีต้อนรับ!",
+    "successDesc": "คุณได้เข้าสู่ระบบสำเร็จ",
+    "continueToSubscribe": "Continue to Subscribe",
+    "backToHome": "Back to Home"
+  },
+  "CookieConsent": {
+    "message": "เราใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ",
+    "accept": "ยอมรับ",
+    "decline": "ปฏิเสธ",
+    "learnMore": "เรียนรู้เพิ่มเติม"
+  },
+  "Account": {
+    "notLoggedIn": "You are not logged in",
+    "signIn": "Sign in",
+    "plan": "Current Plan",
+    "yearlyPlan": "Yearly VIP",
+    "expires": "Expires",
+    "devices": "Devices",
+    "unlimited": "Unlimited",
+    "status": "Status",
+    "active": "Active",
+    "logout": "Logout",
+    "logoutTitle": "Confirm Logout",
+    "logoutConfirm": "Are you sure you want to log out? Your session will be cleared.",
+    "cancel": "Cancel",
+    "confirmLogout": "Logout"
+  }
+}
