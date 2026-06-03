@@ -579,5 +579,9 @@
     "logoutConfirm": "Are you sure you want to log out? Your session will be cleared.",
     "cancel": "Cancel",
     "confirmLogout": "Logout"
+  },
+  "NotFound": {
+    "message": "الصفحة التي تبحث عنها غير موجودة.",
+    "backHome": "العودة إلى الصفحة الرئيسية"
   }
 }

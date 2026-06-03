@@ -19,6 +19,12 @@ export async function generateMetadata({ params: { locale } }: Props) {
   return {
     title: t('title'),
     description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+      siteName: 'Sparklink',
+    },
   };
 }
 
@@ -28,7 +34,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
 
   return (
     <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
-      <body className={`${inter.variable} ${notoSansSC.variable} ${notoArabic.variable} bg-[#0F172A] text-[#F8FAFC] font-sans antialiased`}>
+      <body className={`${inter.variable} ${notoSansSC.variable} ${notoArabic.variable} bg-bg text-text-primary font-sans antialiased`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header locale={locale} />
           <main className="min-h-screen">{children}</main>

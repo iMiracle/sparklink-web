@@ -76,39 +76,237 @@
     "title": "用户评价",
     "count": "全球超过1000+条用户好评",
     "items": [
-      { "name": "陈明", "country": "新加坡", "avatar": "C", "rating": 5, "text": "最好用的 VPN，速度超快，非常稳定！" },
-      { "name": "Maria Santos", "country": "巴西", "avatar": "M", "rating": 5, "text": "免费奖励系统太棒了，用了几个月一分钱没花。" },
-      { "name": "John Smith", "country": "美国", "avatar": "J", "rating": 5, "text": "速度快，设置简单。强烈推荐！" },
-      { "name": "田中优树", "country": "日本", "avatar": "Y", "rating": 5, "text": "连接非常稳定，我每天都用它玩游戏。" },
-      { "name": "Priya Patel", "country": "印度", "avatar": "P", "rating": 4, "text": "看视频非常流畅。偶尔需要重连，但总体很好。" },
-      { "name": "Carlos Garcia", "country": "墨西哥", "avatar": "C", "rating": 5, "text": "终于找到全家都能用的 VPN 了！" },
-      { "name": "Emma Wilson", "country": "英国", "avatar": "E", "rating": 5, "text": "无日志政策让我很放心。值得信赖。" },
-      { "name": "Omar Hassan", "country": "埃及", "avatar": "O", "rating": 4, "text": "性价比很高。看广告免费版已经很慷慨了。" },
-      { "name": "Sophie Martin", "country": "法国", "avatar": "S", "rating": 5, "text": "非常快且易于使用。强烈推荐！" },
-      { "name": "张伟", "country": "中国", "avatar": "Z", "rating": 5, "text": "唯一能稳定使用的 VPN，无法推荐更多。" },
-      { "name": "Lucas Oliveira", "country": "巴西", "avatar": "L", "rating": 4, "text": "看其他地区的视频很好用，速度也不错。" },
-      { "name": "Aisha Mohammed", "country": "阿联酋", "avatar": "A", "rating": 5, "text": "设置超简单，客服响应也很及时。" },
-      { "name": "Daniel Kim", "country": "韩国", "avatar": "D", "rating": 5, "text": "亚洲节点延迟很低，是我们的最佳选择。" },
-      { "name": "Sarah Johnson", "country": "澳大利亚", "avatar": "S", "rating": 4, "text": "高峰时段也很稳定。对服务很满意。" },
-      { "name": "Rajesh Kumar", "country": "印度", "avatar": "R", "rating": 5, "text": "物超所值。年卡套餐非常划算。" },
-      { "name": "Nina Petrov", "country": "俄罗斯", "avatar": "N", "rating": 5, "text": "看视频没有缓冲，速度非常好。" },
-      { "name": "Tommy Lee", "country": "香港", "avatar": "T", "rating": 4, "text": "服务器选择丰富，日常使用很稳定。" },
-      { "name": "Isabella Costa", "country": "意大利", "avatar": "I", "rating": 5, "text": "太棒了！所有的流媒体服务都能完美使用。" },
-      { "name": "Ahmed Rahman", "country": "马来西亚", "avatar": "A", "rating": 5, "text": "用了6个月了，没有任何抱怨，服务很棒。" },
-      { "name": "Lena Schmidt", "country": "德国", "avatar": "L", "rating": 4, "text": "非常好！连接稳定，速度令人满意。" },
-      { "name": "Kevin Brown", "country": "加拿大", "avatar": "K", "rating": 5, "text": "多设备支持太方便了，全家都连上了。" },
-      { "name": "王美", "country": "台湾", "avatar": "W", "rating": 5, "text": "快速、安全、实惠。VPN 该有的都有。" },
-      { "name": "Pedro Hernandez", "country": "西班牙", "avatar": "P", "rating": 4, "text": "很不错的选择。免费版已经够用了。" },
-      { "name": "Fatima Al-Sayed", "country": "卡塔尔", "avatar": "F", "rating": 5, "text": "注重隐私，政策透明。我信任他们。" },
-      { "name": "Jack Thompson", "country": "新西兰", "avatar": "J", "rating": 5, "text": "即使在偏远地区也完美运行，网络延迟很好。" },
-      { "name": "Ananya Singh", "country": "印度", "avatar": "A", "rating": 4, "text": "速度快，使用方便。奖励系统是额外的福利。" },
-      { "name": "Dmitri Ivanov", "country": "乌克兰", "avatar": "D", "rating": 5, "text": "突破地理限制的最佳 VPN，每次都能成功。" },
-      { "name": "Hannah Müller", "country": "奥地利", "avatar": "H", "rating": 5, "text": "服务非常出色，连接始终稳定快速。" },
-      { "name": "Ryan O'Brien", "country": "爱尔兰", "avatar": "R", "rating": 4, "text": "可靠的 VPN 服务。偶尔断开但自动重连很给力。" },
-      { "name": "山本樱", "country": "日本", "avatar": "S", "rating": 5, "text": "游戏线路优化太棒了，网络延迟降了一半。" },
-      { "name": "Mohammed Ali", "country": "沙特阿拉伯", "avatar": "M", "rating": 5, "text": "值得信赖且速度快。无日志正是我想要的。" },
-      { "name": "Elena Popescu", "country": "罗马尼亚", "avatar": "E", "rating": 4, "text": "服务不错！速度快，连接迅速。推荐。" },
-      { "name": "Chris Anderson", "country": "瑞典", "avatar": "C", "rating": 5, "text": "目前市场上最好的 VPN，速度和可靠性一流。" }
+      {
+        "name": "陈明",
+        "country": "新加坡",
+        "avatar": "C",
+        "rating": 5,
+        "text": "最好用的 VPN，速度超快，非常稳定！"
+      },
+      {
+        "name": "Maria Santos",
+        "country": "巴西",
+        "avatar": "M",
+        "rating": 5,
+        "text": "免费奖励系统太棒了，用了几个月一分钱没花。"
+      },
+      {
+        "name": "John Smith",
+        "country": "美国",
+        "avatar": "J",
+        "rating": 5,
+        "text": "速度快，设置简单。强烈推荐！"
+      },
+      {
+        "name": "田中优树",
+        "country": "日本",
+        "avatar": "Y",
+        "rating": 5,
+        "text": "连接非常稳定，我每天都用它玩游戏。"
+      },
+      {
+        "name": "Priya Patel",
+        "country": "印度",
+        "avatar": "P",
+        "rating": 4,
+        "text": "看视频非常流畅。偶尔需要重连，但总体很好。"
+      },
+      {
+        "name": "Carlos Garcia",
+        "country": "墨西哥",
+        "avatar": "C",
+        "rating": 5,
+        "text": "终于找到全家都能用的 VPN 了！"
+      },
+      {
+        "name": "Emma Wilson",
+        "country": "英国",
+        "avatar": "E",
+        "rating": 5,
+        "text": "无日志政策让我很放心。值得信赖。"
+      },
+      {
+        "name": "Omar Hassan",
+        "country": "埃及",
+        "avatar": "O",
+        "rating": 4,
+        "text": "性价比很高。看广告免费版已经很慷慨了。"
+      },
+      {
+        "name": "Sophie Martin",
+        "country": "法国",
+        "avatar": "S",
+        "rating": 5,
+        "text": "非常快且易于使用。强烈推荐！"
+      },
+      {
+        "name": "张伟",
+        "country": "中国",
+        "avatar": "Z",
+        "rating": 5,
+        "text": "唯一能稳定使用的 VPN，无法推荐更多。"
+      },
+      {
+        "name": "Lucas Oliveira",
+        "country": "巴西",
+        "avatar": "L",
+        "rating": 4,
+        "text": "看其他地区的视频很好用，速度也不错。"
+      },
+      {
+        "name": "Aisha Mohammed",
+        "country": "阿联酋",
+        "avatar": "A",
+        "rating": 5,
+        "text": "设置超简单，客服响应也很及时。"
+      },
+      {
+        "name": "Daniel Kim",
+        "country": "韩国",
+        "avatar": "D",
+        "rating": 5,
+        "text": "亚洲节点延迟很低，是我们的最佳选择。"
+      },
+      {
+        "name": "Sarah Johnson",
+        "country": "澳大利亚",
+        "avatar": "S",
+        "rating": 4,
+        "text": "高峰时段也很稳定。对服务很满意。"
+      },
+      {
+        "name": "Rajesh Kumar",
+        "country": "印度",
+        "avatar": "R",
+        "rating": 5,
+        "text": "物超所值。年卡套餐非常划算。"
+      },
+      {
+        "name": "Nina Petrov",
+        "country": "俄罗斯",
+        "avatar": "N",
+        "rating": 5,
+        "text": "看视频没有缓冲，速度非常好。"
+      },
+      {
+        "name": "Tommy Lee",
+        "country": "香港",
+        "avatar": "T",
+        "rating": 4,
+        "text": "服务器选择丰富，日常使用很稳定。"
+      },
+      {
+        "name": "Isabella Costa",
+        "country": "意大利",
+        "avatar": "I",
+        "rating": 5,
+        "text": "太棒了！所有的流媒体服务都能完美使用。"
+      },
+      {
+        "name": "Ahmed Rahman",
+        "country": "马来西亚",
+        "avatar": "A",
+        "rating": 5,
+        "text": "用了6个月了，没有任何抱怨，服务很棒。"
+      },
+      {
+        "name": "Lena Schmidt",
+        "country": "德国",
+        "avatar": "L",
+        "rating": 4,
+        "text": "非常好！连接稳定，速度令人满意。"
+      },
+      {
+        "name": "Kevin Brown",
+        "country": "加拿大",
+        "avatar": "K",
+        "rating": 5,
+        "text": "多设备支持太方便了，全家都连上了。"
+      },
+      {
+        "name": "王美",
+        "country": "台湾",
+        "avatar": "W",
+        "rating": 5,
+        "text": "快速、安全、实惠。VPN 该有的都有。"
+      },
+      {
+        "name": "Pedro Hernandez",
+        "country": "西班牙",
+        "avatar": "P",
+        "rating": 4,
+        "text": "很不错的选择。免费版已经够用了。"
+      },
+      {
+        "name": "Fatima Al-Sayed",
+        "country": "卡塔尔",
+        "avatar": "F",
+        "rating": 5,
+        "text": "注重隐私，政策透明。我信任他们。"
+      },
+      {
+        "name": "Jack Thompson",
+        "country": "新西兰",
+        "avatar": "J",
+        "rating": 5,
+        "text": "即使在偏远地区也完美运行，网络延迟很好。"
+      },
+      {
+        "name": "Ananya Singh",
+        "country": "印度",
+        "avatar": "A",
+        "rating": 4,
+        "text": "速度快，使用方便。奖励系统是额外的福利。"
+      },
+      {
+        "name": "Dmitri Ivanov",
+        "country": "乌克兰",
+        "avatar": "D",
+        "rating": 5,
+        "text": "突破地理限制的最佳 VPN，每次都能成功。"
+      },
+      {
+        "name": "Hannah Müller",
+        "country": "奥地利",
+        "avatar": "H",
+        "rating": 5,
+        "text": "服务非常出色，连接始终稳定快速。"
+      },
+      {
+        "name": "Ryan O'Brien",
+        "country": "爱尔兰",
+        "avatar": "R",
+        "rating": 4,
+        "text": "可靠的 VPN 服务。偶尔断开但自动重连很给力。"
+      },
+      {
+        "name": "山本樱",
+        "country": "日本",
+        "avatar": "S",
+        "rating": 5,
+        "text": "游戏线路优化太棒了，网络延迟降了一半。"
+      },
+      {
+        "name": "Mohammed Ali",
+        "country": "沙特阿拉伯",
+        "avatar": "M",
+        "rating": 5,
+        "text": "值得信赖且速度快。无日志正是我想要的。"
+      },
+      {
+        "name": "Elena Popescu",
+        "country": "罗马尼亚",
+        "avatar": "E",
+        "rating": 4,
+        "text": "服务不错！速度快，连接迅速。推荐。"
+      },
+      {
+        "name": "Chris Anderson",
+        "country": "瑞典",
+        "avatar": "C",
+        "rating": 5,
+        "text": "目前市场上最好的 VPN，速度和可靠性一流。"
+      }
     ]
   },
   "Download": {
@@ -258,16 +456,66 @@
       "dedicated": "专属服务器"
     },
     "comparison": {
-      "nodes": { "free": "有限节点", "monthly": "200+ VIP节点", "quarterly": "200+ VIP节点", "yearly": "200+ VIP节点" },
-      "bandwidth": { "free": "5Mbps", "monthly": "100Mbps", "quarterly": "100Mbps", "yearly": "不限量" },
-      "devices": { "free": "1台设备", "monthly": "10台设备", "quarterly": "10台设备", "yearly": "不限设备" },
-      "gameLine": { "free": "—", "monthly": "✓", "quarterly": "✓", "yearly": "✓" },
-      "videoLine": { "free": "—", "monthly": "✓", "quarterly": "✓", "yearly": "✓" },
-      "support": { "free": "社区论坛", "monthly": "优先", "quarterly": "优先", "yearly": "24/7优先" },
-      "ads": { "free": "有广告", "monthly": "无广告", "quarterly": "无广告", "yearly": "无广告" },
-      "routing": { "free": "标准路由", "monthly": "标准路由", "quarterly": "智能路由", "yearly": "智能路由" },
-      "protocol": { "free": "单协议", "monthly": "多协议", "quarterly": "多协议", "yearly": "多协议" },
-      "dedicated": { "free": "—", "monthly": "—", "quarterly": "—", "yearly": "可选" }
+      "nodes": {
+        "free": "有限节点",
+        "monthly": "200+ VIP节点",
+        "quarterly": "200+ VIP节点",
+        "yearly": "200+ VIP节点"
+      },
+      "bandwidth": {
+        "free": "5Mbps",
+        "monthly": "100Mbps",
+        "quarterly": "100Mbps",
+        "yearly": "不限量"
+      },
+      "devices": {
+        "free": "1台设备",
+        "monthly": "10台设备",
+        "quarterly": "10台设备",
+        "yearly": "不限设备"
+      },
+      "gameLine": {
+        "free": "—",
+        "monthly": "✓",
+        "quarterly": "✓",
+        "yearly": "✓"
+      },
+      "videoLine": {
+        "free": "—",
+        "monthly": "✓",
+        "quarterly": "✓",
+        "yearly": "✓"
+      },
+      "support": {
+        "free": "社区论坛",
+        "monthly": "优先",
+        "quarterly": "优先",
+        "yearly": "24/7优先"
+      },
+      "ads": {
+        "free": "有广告",
+        "monthly": "无广告",
+        "quarterly": "无广告",
+        "yearly": "无广告"
+      },
+      "routing": {
+        "free": "标准路由",
+        "monthly": "标准路由",
+        "quarterly": "智能路由",
+        "yearly": "智能路由"
+      },
+      "protocol": {
+        "free": "单协议",
+        "monthly": "多协议",
+        "quarterly": "多协议",
+        "yearly": "多协议"
+      },
+      "dedicated": {
+        "free": "—",
+        "monthly": "—",
+        "quarterly": "—",
+        "yearly": "可选"
+      }
     },
     "refundPolicy": "7天无理由退款 · 安全支付"
   },
@@ -317,8 +565,7 @@
     "accept": "接受",
     "decline": "拒绝",
     "learnMore": "了解更多"
-  }
-,
+  },
   "Account": {
     "notLoggedIn": "您还没有登录",
     "signIn": "登录",
@@ -334,5 +581,9 @@
     "logoutConfirm": "确定要退出登录吗？",
     "cancel": "取消",
     "confirmLogout": "确定退出"
+  },
+  "NotFound": {
+    "message": "您访问的页面不存在。",
+    "backHome": "返回首页"
   }
 }

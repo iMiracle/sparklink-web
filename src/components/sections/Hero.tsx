@@ -21,11 +21,11 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A] to-[#020617]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg to-bg" />
 
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[#4F46E5]/20 rounded-full blur-3xl opacity-30 animate-pulse-slow" />
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-[#06B6D4]/20 rounded-full blur-3xl opacity-30 animate-pulse-slow" />
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-primary/20 rounded-full blur-3xl opacity-30 animate-pulse-slow" />
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-secondary/20 rounded-full blur-3xl opacity-30 animate-pulse-slow" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -42,7 +42,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xl md:text-2xl text-[#94A3B8] mb-8 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto"
         >
           {t('subtitle')}
         </motion.p>
@@ -65,12 +65,12 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-wrap justify-center gap-8"
         >
-          <div className="flex items-center gap-2 text-[#94A3B8]">
-            <span className="w-2 h-2 bg-[#10B981] rounded-full" />
+          <div className="flex items-center gap-2 text-text-secondary">
+            <span className="w-2 h-2 bg-success rounded-full" />
             <span>{t('appStore')}</span>
           </div>
-          <div className="flex items-center gap-2 text-[#94A3B8]">
-            <span className="w-2 h-2 bg-[#10B981] rounded-full" />
+          <div className="flex items-center gap-2 text-text-secondary">
+            <span className="w-2 h-2 bg-success rounded-full" />
             <span>{t('android')}</span>
           </div>
         </motion.div>
@@ -82,7 +82,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8"
           >
-            <span className="text-[#64748B] text-sm">
+            <span className="text-text-tertiary text-sm">
               {onlineCount} {t('serversOnline')}
             </span>
           </motion.div>

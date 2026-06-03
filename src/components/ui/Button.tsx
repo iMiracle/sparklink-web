@@ -19,12 +19,12 @@ export function Button({ variant = 'primary', size = 'md', href, className, chil
     'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]';
 
   const variants: Record<string, string> = {
-    primary: 'bg-gradient-to-r from-[#4F46E5] to-[#06B6D4] text-white hover:opacity-90',
-    secondary: 'bg-[#334155] text-[#F8FAFC] hover:bg-[#475569]',
-    ghost: 'text-[#94A3B8] hover:text-[#F8FAFC]',
-    text: 'text-[#4F46E5] hover:text-[#3730A3] bg-transparent',
-    danger: 'bg-[#EF4444] text-white hover:bg-[#DC2626]',
-    icon: 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#334155] w-10 h-10 p-0',
+    primary: 'bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90',
+    secondary: 'bg-bg-surface text-text-primary hover:bg-bg-surface-hover',
+    ghost: 'text-text-secondary hover:text-text-primary',
+    text: 'text-primary hover:text-primary-dark bg-transparent',
+    danger: 'bg-error text-white hover:bg-red-600',
+    icon: 'text-text-secondary hover:text-text-primary hover:bg-bg-surface w-10 h-10 p-0',
   };
 
   const sizes: Record<string, string> = {

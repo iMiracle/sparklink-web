@@ -5,7 +5,7 @@ export default async function PrivacyPage() {
   return (
     <div className="pt-24 pb-16 container mx-auto px-4 max-w-3xl">
       <h1 className="text-3xl font-bold text-white mb-8">{t('privacy.title')}</h1>
-      <div className="text-[#94A3B8] space-y-4">
+      <div className="text-text-secondary space-y-4">
         <p>{t('privacy.content')}</p>
       </div>
     </div>

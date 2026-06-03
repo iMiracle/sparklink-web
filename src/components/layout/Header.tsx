@@ -93,7 +93,7 @@ export function Header({ locale }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/80 backdrop-blur-lg border-b border-[#334155]/50">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-lg border-b border-bg-surface/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center h-16">
             <div className="flex-1 flex items-center">
@@ -101,7 +101,7 @@ export function Header({ locale }: HeaderProps) {
                 href={`/${locale}`}
                 className="text-xl font-bold text-white flex items-center gap-2"
               >
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4F46E5] to-[#06B6D4] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -115,7 +115,7 @@ export function Header({ locale }: HeaderProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[#94A3B8] hover:text-white transition-colors text-lg font-medium"
+                  className="text-text-secondary hover:text-white transition-colors text-lg font-medium"
                 >
                   {link.label}
                 </Link>
@@ -127,27 +127,27 @@ export function Header({ locale }: HeaderProps) {
                 <div className="relative" ref={userRef}>
                   <button
                     onClick={() => setUserMenuOpen(!userMenuOpen)}
-                    className="flex items-center gap-2 text-[#CBD5E1] hover:text-white transition-colors px-3 py-1.5 rounded-lg hover:bg-[#334155]"
+                    className="flex items-center gap-2 text-text-light hover:text-white transition-colors px-3 py-1.5 rounded-lg hover:bg-bg-surface"
                   >
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#06B6D4] flex items-center justify-center">
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                       <User className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-sm">138****5678</span>
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform ${userMenuOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {userMenuOpen && (
-                    <div className="absolute end-0 top-full mt-1 bg-[#0F172A] border border-[#334155] rounded-xl py-4 min-w-[200px] shadow-xl">
+                    <div className="absolute end-0 top-full mt-1 bg-bg border border-bg-surface rounded-xl py-4 min-w-[200px] shadow-xl">
                       <Link
                         href={`/${locale}/account`}
                         onClick={() => setUserMenuOpen(false)}
-                        className="block px-4 pb-3 border-b border-[#334155] hover:bg-[#1E293B] transition-colors"
+                        className="block px-4 pb-3 border-b border-bg-surface hover:bg-bg-secondary transition-colors"
                       >
                         <p className="text-white font-medium">138****5678</p>
-                        <p className="text-[#94A3B8] text-xs mt-1">VIP Member</p>
+                        <p className="text-text-secondary text-xs mt-1">VIP Member</p>
                       </Link>
                       <button
                         onClick={handleLogout}
-                        className="flex items-center gap-2 w-full text-start px-4 pt-3 text-sm text-[#CBD5E1] hover:text-white transition-colors"
+                        className="flex items-center gap-2 w-full text-start px-4 pt-3 text-sm text-text-light hover:text-white transition-colors"
                       >
                         <LogOut className="w-4 h-4" />
                         {t('signOut')}
@@ -162,21 +162,21 @@ export function Header({ locale }: HeaderProps) {
               <div className="relative" ref={localeRef}>
                 <button
                   onClick={() => setLocaleOpen(!localeOpen)}
-                  className="flex items-center gap-1 text-[#94A3B8] hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-[#334155]"
+                  className="flex items-center gap-1 text-text-secondary hover:text-white transition-colors px-2 py-1 rounded-lg hover:bg-bg-surface"
                 >
                   <Globe className="w-4 h-4" />
                   <span className="text-sm">{currentLocale?.code}</span>
                 </button>
                 {localeOpen && (
-                  <div className="absolute end-0 top-full mt-1 bg-[#0F172A] border border-[#334155] rounded-xl py-2 min-w-[160px] shadow-xl">
+                  <div className="absolute end-0 top-full mt-1 bg-bg border border-bg-surface rounded-xl py-2 min-w-[160px] shadow-xl">
                     {locales.map(l => (
                       <button
                         key={l.code}
                         onClick={() => switchLocale(l.code)}
                         className={`block w-full text-start px-4 py-2 text-sm transition-colors ${
                           l.code === locale
-                            ? 'text-[#4F46E5] bg-[#4F46E5]/10'
-                            : 'text-[#CBD5E1] hover:bg-[#1E293B]'
+                            ? 'text-primary bg-primary/10'
+                            : 'text-text-light hover:bg-bg-secondary'
                         }`}
                       >
                         {l.label}
@@ -202,18 +202,18 @@ export function Header({ locale }: HeaderProps) {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-[#1E293B] rounded-2xl border border-[#334155] p-6 max-w-sm w-full mx-4"
+              className="bg-bg-secondary rounded-2xl border border-bg-surface p-6 max-w-sm w-full mx-4"
               onClick={e => e.stopPropagation()}
             >
               <div className="text-center mb-6">
                 <h3 className="text-lg font-semibold text-white mb-2">{tAccount('logoutTitle')}</h3>
-                <p className="text-sm text-[#94A3B8]">{tAccount('logoutConfirm')}</p>
+                <p className="text-sm text-text-secondary">{tAccount('logoutConfirm')}</p>
               </div>
               <div className="flex gap-3">
                 <Button onClick={() => setShowLogout(false)} variant="secondary" className="flex-1">
                   {tAccount('cancel')}
                 </Button>
-                <Button onClick={confirmLogout} className="flex-1 bg-[#EF4444] hover:bg-[#DC2626]">
+                <Button onClick={confirmLogout} className="flex-1 bg-error hover:bg-red-600">
                   {tAccount('confirmLogout')}
                 </Button>
               </div>

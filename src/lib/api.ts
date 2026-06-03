@@ -25,6 +25,7 @@ export interface ApiResponse<T> {
   code: number;
   message: string;
   data: T | null;
+  requestId?: string;
 }
 
 const TOKEN_KEY = 'sparklink-token';
@@ -96,9 +97,19 @@ async function login(phone: string, code: string): Promise<ApiResponse<{ token: 
   });
 }
 
+async function getQRCode(): Promise<ApiResponse<{ sessionId: string; qrData: string; expiresAt: string }>> {
+  return request('/api/v1/auth/qrcode', { method: 'POST' });
+}
+
+async function pollQRStatus(sessionId: string): Promise<ApiResponse<{ token: string; userId?: number } | null>> {
+  return request(`/api/v1/auth/qrcode/status?sessionId=${encodeURIComponent(sessionId)}`);
+}
+
 export const api = {
   getNodes,
   getPlans,
   sendCode,
   login,
+  getQRCode,
+  pollQRStatus,
 };

@@ -1,18 +1,55 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { Home } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
 export default function LocaleNotFound() {
+  const { locale } = useParams();
+  const t = useTranslations('NotFound');
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-        <p className="text-xl text-[#94A3B8] mb-8">Page not found</p>
-        <Link
-          href="/"
-          className="inline-flex items-center px-6 py-3 rounded-lg bg-[#4F46E5] text-white hover:bg-[#4338CA] transition-colors"
-        >
-          Go Home
-        </Link>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <div className="absolute inset-0 bg-bg" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30" />
+        <div className="absolute -bottom-1/2 right-1/3 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-30" />
       </div>
-    </div>
+
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-8xl md:text-9xl font-bold text-white mb-4"
+        >
+          404
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-xl md:text-2xl text-text-secondary mb-8 max-w-md mx-auto"
+        >
+          {t('message')}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Button href={`/${locale}`} size="lg" className="gap-2">
+            <Home className="w-5 h-5" />
+            {t('backHome')}
+          </Button>
+        </motion.div>
+      </div>
+    </section>
   );
 }

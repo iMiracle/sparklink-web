@@ -579,5 +579,9 @@
     "logoutConfirm": "Are you sure you want to log out? Your session will be cleared.",
     "cancel": "Cancel",
     "confirmLogout": "Logout"
+  },
+  "NotFound": {
+    "message": "หน้าที่คุณกำลังมองหาไม่มีอยู่",
+    "backHome": "กลับหน้าแรก"
   }
 }

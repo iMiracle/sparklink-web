@@ -10,7 +10,7 @@ export async function Footer({ locale }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-[#020617] border-t border-[#334155]">
+    <footer className="py-12 bg-bg border-t border-bg-surface">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
@@ -20,25 +20,25 @@ export async function Footer({ locale }: FooterProps) {
           <nav className="flex gap-6">
             <Link
               href={`/${locale}/privacy`}
-              className="text-[#94A3B8] hover:text-white transition-colors text-sm"
+              className="text-text-secondary hover:text-white transition-colors text-sm"
             >
               {t('privacy')}
             </Link>
             <Link
               href={`/${locale}/terms`}
-              className="text-[#94A3B8] hover:text-white transition-colors text-sm"
+              className="text-text-secondary hover:text-white transition-colors text-sm"
             >
               {t('terms')}
             </Link>
             <Link
               href={`/${locale}/faq`}
-              className="text-[#94A3B8] hover:text-white transition-colors text-sm"
+              className="text-text-secondary hover:text-white transition-colors text-sm"
             >
               {t('faq')}
             </Link>
           </nav>
 
-          <p className="text-[#64748B] text-sm">
+          <p className="text-text-tertiary text-sm">
             {t('copyright', { year: currentYear })}
           </p>
         </div>

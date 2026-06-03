@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { useSearchParams, useParams } from 'next/navigation';
+import { useSearchParams, useParams, useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QrCode, Smartphone, CheckCircle, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -35,6 +36,7 @@ export default function AuthPage() {
   const t = useTranslations('Auth');
   const searchParams = useSearchParams();
   const { locale } = useParams();
+  const router = useRouter();
   const plan = searchParams.get('plan');
   const [tab, setTab] = useState<'qr' | 'sms'>('qr');
   const [countryCode, setCountryCode] = useState('+86');
@@ -47,6 +49,58 @@ export default function AuthPage() {
   const [error, setError] = useState<string | null>(null);
   const [ccOpen, setCcOpen] = useState(false);
   const ccRef = useRef<HTMLDivElement>(null);
+
+  const [qrSessionId, setQrSessionId] = useState<string | null>(null);
+  const [qrData, setQrData] = useState<string | null>(null);
+  const [qrError, setQrError] = useState<string | null>(null);
+  const [qrExpired, setQrExpired] = useState(false);
+  const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const qrLoginSuccess = useCallback((token: string) => {
+    setToken(token);
+    setLoggedIn(true);
+  }, []);
+
+  useEffect(() => {
+    if (tab !== 'qr') {
+      if (pollingRef.current) clearInterval(pollingRef.current);
+      return;
+    }
+    setQrSessionId(null);
+    setQrData(null);
+    setQrError(null);
+    setQrExpired(false);
+
+    api.getQRCode().then(res => {
+      if (res.code === 0 && res.data) {
+        setQrSessionId(res.data.sessionId);
+        setQrData(res.data.qrData);
+      } else {
+        setQrError(res.message || 'Failed to generate QR code');
+      }
+    });
+
+    return () => {
+      if (pollingRef.current) clearInterval(pollingRef.current);
+    };
+  }, [tab]);
+
+  useEffect(() => {
+    if (!qrSessionId || qrExpired) return;
+    pollingRef.current = setInterval(async () => {
+      const res = await api.pollQRStatus(qrSessionId);
+      if (res.code === 0 && res.data?.token) {
+        if (pollingRef.current) clearInterval(pollingRef.current);
+        qrLoginSuccess(res.data.token);
+      } else if (res.code === 1004) {
+        if (pollingRef.current) clearInterval(pollingRef.current);
+        setQrExpired(true);
+      }
+    }, 2000);
+    return () => {
+      if (pollingRef.current) clearInterval(pollingRef.current);
+    };
+  }, [qrSessionId, qrExpired, qrLoginSuccess]);
 
   const currentCountry = countryCodes.find(c => c.code === countryCode) || countryCodes[0];
 
@@ -109,15 +163,15 @@ export default function AuthPage() {
 
   if (loggedIn) {
     return (
-      <div className="min-h-screen bg-[#020617] flex items-center justify-center">
+      <div className="min-h-screen bg-bg flex items-center justify-center">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="text-center"
         >
-          <CheckCircle className="w-16 h-16 text-[#10B981] mx-auto mb-4" />
+          <CheckCircle className="w-16 h-16 text-success mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-white mb-2">{t('successTitle')}</h1>
-          <p className="text-[#94A3B8] mb-6">{t('successDesc')}</p>
+          <p className="text-text-secondary mb-6">{t('successDesc')}</p>
           {plan ? (
             <Button href={`/${locale}/subscribe?plan=${plan}`} size="lg">
               {t('continueToSubscribe')}
@@ -133,13 +187,13 @@ export default function AuthPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#020617] pt-24 pb-16 px-4">
+    <div className="min-h-screen bg-bg pt-24 pb-16 px-4">
       <div className="max-w-md mx-auto">
-        <div className="flex mb-8 bg-[#0F172A] rounded-xl p-1 border border-[#334155]">
+        <div className="flex mb-8 bg-bg rounded-xl p-1 border border-bg-surface">
           <button
             onClick={() => { setTab('qr'); setError(null); }}
             className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-colors ${
-              tab === 'qr' ? 'bg-[#4F46E5] text-white' : 'text-[#94A3B8] hover:text-white'
+              tab === 'qr' ? 'bg-primary text-white' : 'text-text-secondary hover:text-white'
             }`}
           >
             <QrCode className="w-4 h-4" />
@@ -148,7 +202,7 @@ export default function AuthPage() {
           <button
             onClick={() => { setTab('sms'); setError(null); }}
             className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-colors ${
-              tab === 'sms' ? 'bg-[#4F46E5] text-white' : 'text-[#94A3B8] hover:text-white'
+              tab === 'sms' ? 'bg-primary text-white' : 'text-text-secondary hover:text-white'
             }`}
           >
             <Smartphone className="w-4 h-4" />
@@ -165,15 +219,51 @@ export default function AuthPage() {
               exit={{ opacity: 0, x: 20 }}
               className="text-center"
             >
-              <div className="w-56 h-56 bg-[#1E293B] rounded-2xl border border-[#334155] mx-auto mb-6 flex items-center justify-center">
-                <QrCode className="w-20 h-20 text-[#4F46E5]" />
+              <div className="w-56 h-56 bg-bg-secondary rounded-2xl border border-bg-surface mx-auto mb-6 flex items-center justify-center">
+                {qrData ? (
+                  <div className="bg-white p-2 rounded-xl">
+                    <Image
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(qrData)}`}
+                      alt="QR Code"
+                      width={176}
+                      height={176}
+                      className="w-44 h-44"
+                    />
+                  </div>
+                ) : qrError ? (
+                  <div className="text-center px-4">
+                    <p className="text-error text-sm">{qrError}</p>
+                  </div>
+                ) : qrExpired ? (
+                  <div className="text-center px-4">
+                    <p className="text-warning text-sm mb-2">{t('qrExpired')}</p>
+                  </div>
+                ) : (
+                  <QrCode className="w-20 h-20 text-primary animate-pulse" />
+                )}
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{t('qrTitle')}</h2>
-              <p className="text-[#94A3B8] text-sm mb-6">{t('qrDesc')}</p>
-              <div className="flex items-center justify-center gap-2 text-sm text-[#64748B]">
-                <span className="w-2 h-2 bg-[#10B981] rounded-full animate-pulse" />
-                {t('qrPolling')}
-              </div>
+              <p className="text-text-secondary text-sm mb-6">{t('qrDesc')}</p>
+              {qrExpired ? (
+                <button
+                  onClick={() => { setQrExpired(false); setQrSessionId(null); setQrData(null); }}
+                  className="px-6 py-2 bg-primary hover:bg-primary-dark text-white text-sm rounded-xl transition-colors"
+                >
+                  {t('qrRefresh')}
+                </button>
+              ) : qrError ? (
+                <button
+                  onClick={() => { setQrError(null); setQrSessionId(null); setQrData(null); }}
+                  className="px-6 py-2 bg-primary hover:bg-primary-dark text-white text-sm rounded-xl transition-colors"
+                >
+                  {t('qrRetry')}
+                </button>
+              ) : (
+                <div className="flex items-center justify-center gap-2 text-sm text-text-tertiary">
+                  <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
+                  {t('qrPolling')}
+                </div>
+              )}
             </motion.div>
           ) : (
             <motion.div
@@ -186,19 +276,19 @@ export default function AuthPage() {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm text-[#94A3B8] mb-1">{t('phoneLabel')}</label>
+                  <label className="block text-sm text-text-secondary mb-1">{t('phoneLabel')}</label>
                   <div className="flex gap-2">
                     <div className="relative" ref={ccRef}>
                       <button
                         type="button"
                         onClick={() => setCcOpen(!ccOpen)}
-                        className="flex items-center gap-1 px-3 py-3 bg-[#0F172A] border border-[#334155] rounded-xl text-white text-sm hover:border-[#4F46E5] transition-colors whitespace-nowrap"
+                        className="flex items-center gap-1 px-3 py-3 bg-bg border border-bg-surface rounded-xl text-white text-sm hover:border-primary transition-colors whitespace-nowrap"
                       >
                         {countryCode}
                         <ChevronDown className={`w-3.5 h-3.5 transition-transform ${ccOpen ? 'rotate-180' : ''}`} />
                       </button>
                       {ccOpen && (
-                        <div className="absolute top-full mt-1 left-0 bg-[#0F172A] border border-[#334155] rounded-xl py-1 min-w-[140px] max-h-60 overflow-y-auto shadow-xl z-10">
+                        <div className="absolute top-full mt-1 left-0 bg-bg border border-bg-surface rounded-xl py-1 min-w-[140px] max-h-60 overflow-y-auto shadow-xl z-10">
                           {countryCodes.map(c => (
                             <button
                               key={c.code}
@@ -206,8 +296,8 @@ export default function AuthPage() {
                               onClick={() => { setCountryCode(c.code); setCcOpen(false); setError(null); }}
                               className={`block w-full text-start px-3 py-2 text-sm transition-colors ${
                                 c.code === countryCode
-                                  ? 'text-[#4F46E5] bg-[#4F46E5]/10'
-                                  : 'text-[#CBD5E1] hover:bg-[#1E293B]'
+                                  ? 'text-primary bg-primary/10'
+                                  : 'text-text-light hover:bg-bg-secondary'
                               }`}
                             >
                               <span className="text-white/60 mr-2">{c.label}</span>
@@ -223,7 +313,7 @@ export default function AuthPage() {
                       onChange={e => { const v = e.target.value.replace(/\D/g, ''); setPhone(v); setError(null); }}
                       placeholder="13800138000"
                       maxLength={currentCountry.maxLen}
-                      className="flex-1 px-4 py-3 bg-[#0F172A] border border-[#334155] rounded-xl text-white placeholder-[#64748B] focus:outline-none focus:border-[#4F46E5]"
+                      className="flex-1 px-4 py-3 bg-bg border border-bg-surface rounded-xl text-white placeholder-text-tertiary focus:outline-none focus:border-primary"
                     />
                   </div>
                 </div>
@@ -233,27 +323,27 @@ export default function AuthPage() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                   >
-                    <label className="block text-sm text-[#94A3B8] mb-1">{t('codeLabel')}</label>
+                    <label className="block text-sm text-text-secondary mb-1">{t('codeLabel')}</label>
                     <input
                       type="text"
                       value={code}
                       onChange={e => { setCode(e.target.value); setError(null); }}
                       placeholder="123456"
                       maxLength={6}
-                      className="w-full px-4 py-3 bg-[#0F172A] border border-[#334155] rounded-xl text-white placeholder-[#64748B] focus:outline-none focus:border-[#4F46E5]"
+                      className="w-full px-4 py-3 bg-bg border border-bg-surface rounded-xl text-white placeholder-text-tertiary focus:outline-none focus:border-primary"
                     />
                   </motion.div>
                 )}
 
                 {error && (
-                  <p className="text-sm text-[#EF4444]">{error}</p>
+                  <p className="text-sm text-error">{error}</p>
                 )}
 
                 {!codeSent ? (
                   <button
                     onClick={handleSendCode}
                     disabled={!isValidPhone(phone) || isLoading}
-                    className="w-full py-3 bg-[#4F46E5] hover:bg-[#4338CA] disabled:bg-[#334155] disabled:text-[#64748B] text-white font-medium rounded-xl transition-colors"
+                    className="w-full py-3 bg-primary hover:bg-primary-dark disabled:bg-bg-surface disabled:text-text-tertiary text-white font-medium rounded-xl transition-colors"
                   >
                     {t('sendCode')}
                   </button>
@@ -262,7 +352,7 @@ export default function AuthPage() {
                     <button
                       onClick={handleLogin}
                       disabled={code.length < 4 || isLoading}
-                      className="w-full py-3 bg-[#4F46E5] hover:bg-[#4338CA] disabled:bg-[#334155] disabled:text-[#64748B] text-white font-medium rounded-xl transition-colors"
+                      className="w-full py-3 bg-primary hover:bg-primary-dark disabled:bg-bg-surface disabled:text-text-tertiary text-white font-medium rounded-xl transition-colors"
                     >
                       {isLoading ? (
                         <span className="flex items-center justify-center gap-2">
@@ -276,7 +366,7 @@ export default function AuthPage() {
                     <button
                       onClick={handleSendCode}
                       disabled={countdown > 0 || isLoading}
-                      className="w-full py-2 text-sm text-[#94A3B8] hover:text-white transition-colors disabled:text-[#64748B]"
+                      className="w-full py-2 text-sm text-text-secondary hover:text-white transition-colors disabled:text-text-tertiary"
                     >
                       {countdown > 0 ? t('resendIn', { seconds: countdown }) : t('resend')}
                     </button>

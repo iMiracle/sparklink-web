@@ -22,7 +22,7 @@ export function Testimonials() {
   const row2 = items.filter((_, i) => i % 2 === 1);
 
   return (
-    <section className="py-24 bg-[#0F172A]">
+    <section className="py-24 bg-bg">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[#4F46E5] text-lg font-medium text-center mb-16"
+          className="text-primary text-lg font-medium text-center mb-16"
         >
           {t('count')}
         </motion.p>
@@ -51,30 +51,30 @@ export function Testimonials() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ delay: Math.min(index * 0.03, 0.3) }}
-                  className={`${rowWidths[index % rowWidths.length]} shrink-0 bg-[#1E293B] rounded-2xl p-6`}
+                  className={`${rowWidths[index % rowWidths.length]} shrink-0 bg-bg-secondary rounded-2xl p-6`}
                 >
                   <div className="flex gap-1 mb-4">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-[#F59E0B] fill-[#F59E0B]" />
+                      <Star key={i} className="w-5 h-5 text-warning fill-warning" />
                     ))}
                   </div>
-                  <p className="text-[#CBD5E1] mb-4">&ldquo;{item.text}&rdquo;</p>
+                  <p className="text-text-light mb-4">&ldquo;{item.text}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#4F46E5] flex items-center justify-center text-white font-medium shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-medium shrink-0">
                       {item.avatar}
                     </div>
                     <div>
                       <p className="text-white font-medium">{item.name}</p>
-                      <p className="text-[#94A3B8] text-sm">{item.country}</p>
+                      <p className="text-text-secondary text-sm">{item.country}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
               <div className="shrink-0 w-32 flex items-center justify-center">
-                <p className="text-[#334155] text-sm whitespace-nowrap">— End —</p>
+                <p className="text-bg-surface text-sm whitespace-nowrap">— End —</p>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0F172A] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-bg to-transparent" />
           </div>
 
           <div className="relative">
@@ -86,30 +86,30 @@ export function Testimonials() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ delay: Math.min(index * 0.03, 0.3) }}
-                  className={`${rowWidths2[index % rowWidths2.length]} shrink-0 bg-[#1E293B] rounded-2xl p-6`}
+                  className={`${rowWidths2[index % rowWidths2.length]} shrink-0 bg-bg-secondary rounded-2xl p-6`}
                 >
                   <div className="flex gap-1 mb-4">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-[#F59E0B] fill-[#F59E0B]" />
+                      <Star key={i} className="w-5 h-5 text-warning fill-warning" />
                     ))}
                   </div>
-                  <p className="text-[#CBD5E1] mb-4">&ldquo;{item.text}&rdquo;</p>
+                  <p className="text-text-light mb-4">&ldquo;{item.text}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#4F46E5] flex items-center justify-center text-white font-medium shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-medium shrink-0">
                       {item.avatar}
                     </div>
                     <div>
                       <p className="text-white font-medium">{item.name}</p>
-                      <p className="text-[#94A3B8] text-sm">{item.country}</p>
+                      <p className="text-text-secondary text-sm">{item.country}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
               <div className="shrink-0 w-32 flex items-center justify-center">
-                <p className="text-[#334155] text-sm whitespace-nowrap">— End —</p>
+                <p className="text-bg-surface text-sm whitespace-nowrap">— End —</p>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0F172A] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-bg to-transparent" />
           </div>
         </div>
       </div>

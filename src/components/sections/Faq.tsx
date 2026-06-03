@@ -12,7 +12,7 @@ export function Faq() {
   const items = t.raw('items') as Array<{ question: string; answer: string }>;
 
   return (
-    <section id="faq" className="py-24 bg-[#020617] scroll-mt-16">
+    <section id="faq" className="py-24 bg-bg scroll-mt-16">
       <div className="container mx-auto px-4 max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export function Faq() {
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-[#1E293B] rounded-xl border border-[#334155] overflow-hidden"
+              className="bg-bg-secondary rounded-xl border border-bg-surface overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -35,7 +35,7 @@ export function Faq() {
               >
                 <span className="text-white font-medium pr-4">{item.question}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-[#94A3B8] transition-transform flex-shrink-0 ${
+                  className={`w-5 h-5 text-text-secondary transition-transform flex-shrink-0 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
@@ -50,7 +50,7 @@ export function Faq() {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <p className="px-6 pb-4 text-[#94A3B8]">{item.answer}</p>
+                    <p className="px-6 pb-4 text-text-secondary">{item.answer}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
