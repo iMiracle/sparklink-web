@@ -101,9 +101,9 @@ export function Header({ locale }: HeaderProps) {
                 href={`/${locale}`}
                 className="text-xl font-bold text-white flex items-center gap-2"
               >
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center overflow-hidden">
+                  <svg viewBox="28 28 64 64" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="white" transform="translate(-1.44,-1.44) scale(0.12)" d="M 620.1 555.9 A 4 4 0 0 1 616 551.9 L 616 487.9 A 4 4 0 0 1 619.8 483.9 A 68 68 0 1 0 548 416 L 548 608 A 140 140 0 0 1 408 748 C 330.8 748 268 685.2 268 608 S 328.5 470.2 403.9 468.1 A 4 4 0 0 1 408 472.1 L 408 536.1 A 4 4 0 0 1 404.2 540.1 A 68 68 0 1 0 476 608 L 476 416 A 140 140 0 0 1 616 276 C 693.2 276 756 338.8 756 416 S 695.5 553.8 620.1 555.9 Z" />
                   </svg>
                 </div>
                 Sparklink
